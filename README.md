@@ -6,7 +6,11 @@ How to install and run
 
 Installs the application to you device. <br>
 
-Navigate to the project directory <br>
+Navigate to the project directory.<br>
+
+### `cd YOUR_FILE_PATH_HERE`
+
+After navigation. <br>
 
 ### `npm install`
 
@@ -18,6 +22,8 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+You will also see any lint errors in the console. <br>
 
-## Create you own git branch and start implementing new features.
+Create you own git branch to add your code <br>
+
+### `git checkout -b YOUR_NEW_LOCAL_BRANCH_NAME`
