@@ -1,0 +1,31 @@
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    background-color: #eee;
+
+}
+
+.nav-item {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-item {
+    border-right: 1px solid #d3d3d3;
+    padding: 10px 5px;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.nav-item:active {
+    background-color: #fff;
+}
+
+.nav-item p {
+    text-transform: uppercase;
+    margin-top: 0;
+}

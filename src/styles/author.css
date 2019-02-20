@@ -1,0 +1,32 @@
+.author {
+    padding: 2rem 1rem;
+    max-width: 850px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.author form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.author .side-by-side {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-column-gap: 20px;
+}
+
+.form-actions .btn {
+    padding: 10px 5px;
+    border: 0;
+}
+
+.form-actions .btn-warning {
+    background-color: #ff3232;
+    color: #eee;
+}
+
+.form-actions .btn-accept {
+    background-color: var(--primary-color);
+    color: #eee;
+}

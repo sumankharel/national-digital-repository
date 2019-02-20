@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import "../../styles/upload-thesis.css";
+import NavBar from "./NavBar";
+import InstitutionInfo from "./InstitutionInfo";
+import AuthorInfo from "./AuthorInfo";
 
-// SAMPLE UPLOAD THESIS COMPONENT, YOU CAN UPDATE OR CREATE YOUR OWN
+
+// SAMPLE UPLOAD THESIS COMPONENT, YOU CAN UPDATE OR CREATE YOUR OWN
 class UploadThesis extends Component {
   render() {
     return (
       <div>
-        <p>Upload thesis component </p>
+        <h1 className="component-title">UPLOAD YOUR THESIS</h1>
+        <NavBar/>
+        <InstitutionInfo />
+        <AuthorInfo />
       </div>
     );
   }
