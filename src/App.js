@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landing from "./components/landing/Landing";
 import Header from "./components/landing/Header";
 import UploadThesis from "./components/upload-thesis/UploadThesis";
-import uploadyourthesis from "./components/upload-thesis/uploadyourthesis";
+
 class App extends Component {
   render() {
     return (
@@ -16,7 +16,7 @@ class App extends Component {
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/upload-thesis" component={UploadThesis} />
-            <Route exact path="/upload-thesis" component={uploadyourthesis} />
+
           </div>
         </Router>
       </Provider>
