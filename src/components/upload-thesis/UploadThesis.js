@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import InstitutionInfo from "./InstitutionInfo";
 import AuthorInfo from "./AuthorInfo";
 import ThesisInfo from "./ThesisInfo";
+import UploadInfo from "./UploadInfo";
 
 
 
@@ -19,6 +20,7 @@ class UploadThesis extends Component {
         <InstitutionInfo />
         <AuthorInfo />
         <ThesisInfo />
+        <UploadInfo />
         
       </div>
     );
