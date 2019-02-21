@@ -30,6 +30,7 @@ class Landing extends Component {
     const { showSearchDocument, showUploadDocument } = this.state;
 
     return (
+      <div className="landingbg">
       <div className="landing">
         <h1>National Digital Repository</h1>
         <div className="landing-buttons">
@@ -48,6 +49,7 @@ class Landing extends Component {
         </div>
         {showSearchDocument ? <SearchDocumentForm /> : null}
         {showUploadDocument ? <UploadDocumentForm /> : null}
+      </div>
       </div>
     );
   }

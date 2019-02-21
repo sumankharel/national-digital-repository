@@ -17,7 +17,7 @@ const SearchDocumentForm = props => {
       </div>
       <div className="advanced-search">
         <input type="checkbox" />
-        <label>Advanced Search</label>
+        <label><p>Advanced Search</p></label>
       </div>
       <button type="submit"> Search</button>
     </div>
