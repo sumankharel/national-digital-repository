@@ -8,6 +8,7 @@ import InputFormField from "../../common/InputFormField";
       <div className="upload your thesis">
 
        <form>
+                      <inputFormField label="THESIS INFO" />
                      <InputFormField label="Thesis Title" name="PLEASE ENTER THE TITLE OF YOUR THESIS" value="PLEASE ENTER THE TITLE OF YOUR THESIS" />
                       <InputFormField label="THESIS ABSTRACT" name="PLEASE ENTER THE ABSTRACT OF YOUR THESIS" value="PLEASE ENTER THE ABSTRACT OF YOUR THESIS" />
                       <InputFormField label="THESIS REFERENCE" name="PLEASE ENTER THE REFERENCE OF YOUR THESIS" value="PLEASE ENTER THE REFERENCE OF YOUR THESIS" />
