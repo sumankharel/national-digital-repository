@@ -14,7 +14,7 @@ export default class AuthorInfo extends Component {
               </div>
 
               <div className="side-by-side">
-              <InputFormField label="Permanent Address" name="permanentAddress" value="State No"  />
+              <InputFormField label="Permanent Address" name="stateNo" value="State No"  />
               <InputFormField name="district" value="District" />
               <InputFormField name="municipility" value="Municipality/VDC" />
               </div>
@@ -30,7 +30,10 @@ export default class AuthorInfo extends Component {
               <InputFormField label="Mobile" type="tel" name="mobile" value="+358" />
               </div>
               
-              <input type="checkbox" name="agreement" id="a" />I wish to receive the updates and information about the oppertunities in future in this email.
+              <div>
+              <input type="checkbox" name="agreement" />
+              <label>I wish to receive the updates and information about the oppertunities in future in this email.</label>
+              </div>
               
               <div className="form-actions side-by-side">
               <button className="btn btn-warning">  Cancel</button>

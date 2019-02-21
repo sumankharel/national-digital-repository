@@ -5,6 +5,8 @@ import "../../styles/upload-thesis.css";
 import NavBar from "./NavBar";
 import InstitutionInfo from "./InstitutionInfo";
 import AuthorInfo from "./AuthorInfo";
+import ThesisInfo from "./ThesisInfo";
+
 
 
 // SAMPLE UPLOAD THESIS COMPONENT, YOU CAN UPDATE OR CREATE YOUR OWN
@@ -16,6 +18,8 @@ class UploadThesis extends Component {
         <NavBar/>
         <InstitutionInfo />
         <AuthorInfo />
+        <ThesisInfo />
+        
       </div>
     );
   }
