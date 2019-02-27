@@ -1,8 +1,6 @@
 .upload {
-    padding: 2rem 1rem;
-    max-width: 850px;
-    display: grid;
-    grid-gap: 10px;
+    width:800px;
+    margin:0 auto;
 }
 
 .upload form {
@@ -20,7 +18,6 @@
     text-align: center;
     padding: 10px 5px;
 }
-
 
 .form-actions .btn {
     padding: 10px 5px;

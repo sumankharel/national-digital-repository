@@ -1,8 +1,6 @@
 .thesis {
-    padding: 2rem 1rem;
-    max-width: 850px;
-    display: grid;
-    grid-gap: 10px;
+    width:800px;
+    margin:0 auto;
 }
 
 .thesis form {
