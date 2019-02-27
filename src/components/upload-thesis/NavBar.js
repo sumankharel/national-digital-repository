@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../styles/nav-bar.css";
-
 export default class NavBar extends Component {
   render() {
     return (
