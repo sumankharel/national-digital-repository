@@ -1,20 +1,20 @@
 .input-form-field {
-    display: grid;
-    grid-gap: 5px;
-    width: 100% !important;
+  display: grid;
+  grid-gap: 10px;
+  width: 100% !important;
 }
 
 .input-form-field label {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .input-form-field input {
-    border: 0;
-    border-bottom: 1px solid #d3d3d3;
-    transition: border-bottom 0.3s ease-in;
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  transition: border-bottom 0.3s ease-in;
 }
 
 .input-form-field input:focus {
-    outline: 0;
-    border-bottom: 1px solid #333;
+  outline: 0;
+  border-bottom: 1px solid #333;
 }

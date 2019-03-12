@@ -4,6 +4,11 @@ header {
   padding: 20px;
 }
 
+header span {
+  text-transform: uppercase;
+  font: bolder;
+}
+
 header .routes {
   float: right;
 }

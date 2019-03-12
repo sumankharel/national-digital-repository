@@ -1,26 +1,26 @@
-import React from 'react'
+import React from "react";
 import PropTypes from "prop-types";
 import "../styles/input-form-field.css";
 
-const InputFormField = (props)  => {
+const InputFormField = ({ label, type, name, value, onChange }) => {
   return (
     <div className="input-form-field">
-      <label>{props.label}</label>
-      <input type={props.type} name={props.name} value={props.value} />
+      <label>{label}</label>
+      <input onChange={onChange} type={type} name={name} value={value} />
     </div>
-  )
-}
+  );
+};
 
 InputFormField.propTypes = {
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    type: PropTypes.string,
-}
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.string
+};
 
 InputFormField.defaultProps = {
-    type: "string"
-}
-
+  type: "string"
+};
 
 export default InputFormField;

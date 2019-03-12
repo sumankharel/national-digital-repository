@@ -1,34 +1,82 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import classNames from "classnames";
 import "../../styles/nav-bar.css";
-export default class NavBar extends Component {
+import {
+  IoIosHome,
+  IoIosPerson,
+  IoIosInformationCircleOutline,
+  IoIosCloudUpload,
+  IoIosCheckmarkCircleOutline
+} from "react-icons/io";
+import { showSelectedUploadForm } from "../../store/actions/uploadThesisActions";
+
+const navItems = [
+  {
+    title: "Institution",
+    icon: <IoIosHome />
+  },
+  {
+    title: "Authors",
+    icon: <IoIosPerson />
+  },
+  {
+    title: "Thesis Info",
+    icon: <IoIosInformationCircleOutline />
+  },
+  {
+    title: "Upload",
+    icon: <IoIosCloudUpload />
+  },
+  {
+    title: "Review",
+    icon: <IoIosCheckmarkCircleOutline />
+  }
+];
+
+class NavBar extends Component {
+  handleShowForm = index => {
+    const id = index + 1;
+    this.props.showSelectedUploadForm(id);
+  };
+
   render() {
+    const { showForm } = this.props.uploadThesis;
+
     return (
       <div className="nav-bar">
-        <div className="nav-item">
-          <i className="fas fa-home" />
-          <p>Institution</p>
-        </div>
-
-        <div className="nav-item">
-          <i className="fas fa-user" />
-          <p>Authors</p>
-        </div>
-
-        <div className="nav-item">
-          <i className="fas fa-info-circle" />
-          <p>Thesis Info</p>
-        </div>
-
-        <div className="nav-item">
-          <i className="fas fa-file-upload" />
-          <p>Upload</p>
-        </div>
-
-        <div className="nav-item">
-          <i className="fas fa-check-circle" />
-          <p>Review</p>
-        </div>
+        {navItems.map((item, i) => (
+          <div
+            key={`nav-item-${i}`}
+            className={classNames("nav-item", {
+              "active-item": showForm === i + 1
+            })}
+            onClick={() => this.handleShowForm(i)}
+          >
+            {item.icon}
+            <p>{item.title}</p>
+          </div>
+        ))}
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  uploadThesis: state.uploadThesis
+});
+
+const mapDispatchToProps = {
+  showSelectedUploadForm
+};
+
+NavBar.propTypes = {
+  uploadThesis: PropTypes.object.isRequired,
+  showSelectedUploadForm: PropTypes.func.isRequired
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavBar);

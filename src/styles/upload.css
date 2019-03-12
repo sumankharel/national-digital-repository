@@ -1,35 +1,37 @@
 .upload {
-    width:800px;
-    margin:0 auto;
+  padding: 20px 0;
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
 }
 
-.upload form {
-    display: grid;
-    grid-gap: 20px;
+.upload h2 {
+  text-align: left;
 }
 
 .upload .side-by-side {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-column-gap: 20px;
 }
 
 .upload .form-info {
-    text-align: center;
-    padding: 10px 5px;
+  text-align: center;
+  padding: 10px 5px;
 }
 
 .form-actions .btn {
-    padding: 10px 5px;
-    border: 0;
+  padding: 10px 5px;
+  border: 0;
 }
 
 .form-actions .btn-warning {
-    background-color: #ff3232;
-    color: #eee;
+  background-color: #ff3232;
+  color: #eee;
 }
 
 .form-actions .btn-accept {
-    background-color: var(--primary-color);
-    color: #eee;
+  background-color: var(--primary-color);
+  color: #eee;
 }
