@@ -1,31 +1,88 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import SelectList from "../../common/SelectList";
+import PrimaryButton from "../../common/PrimaryButton";
+import { IoIosSearch } from "react-icons/io";
+import { setSearchInput } from "../../store/actions/searchDocumentActions";
 
-const SearchDocumentForm = props => {
-  return (
-    <div className="search-document-form">
-      <div>
-        <input
-          type="text"
-          placeholder="Search with title, keyword, author's name"
-        />
+class SearchDocumentForm extends Component {
+  handleChange = e => {
+    const data = { name: e.target.name, value: e.target.value };
+    this.props.setSearchInput(data);
+  };
+
+  handleSearchDocuments = e => {
+    alert("handle search document");
+  };
+
+  render() {
+    const {
+      universities,
+      campuses,
+      subjects
+    } = this.props.searchDocument.options;
+    const { university, campus, subject } = this.props.searchDocument.value;
+
+    return (
+      <div className="search-document-form">
+        <div>
+          <input
+            type="text"
+            placeholder="Search with title, keyword, author's name"
+          />
+        </div>
+        <div>
+          <SelectList
+            name="university"
+            value={university}
+            options={universities}
+            defaultOptionValue="Select University"
+            onChange={this.handleChange}
+          />
+          <SelectList
+            name="campus"
+            value={campus}
+            options={campuses}
+            defaultOptionValue="Select Campus"
+            onChange={this.handleChange}
+          />
+          <SelectList
+            name="subject"
+            value={subject}
+            options={subjects}
+            defaultOptionValue="Select Subject"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="advanced-search">
+          <input type="checkbox" />
+          <label>
+            <p>Advanced Search</p>
+          </label>
+        </div>
+        <PrimaryButton onClick={this.handleSearchDocuments}>
+          Search <IoIosSearch />
+        </PrimaryButton>
       </div>
-      <div>
-        <input type="text" placeholder="University" />
-        <input type="text" placeholder="Central Campus" />
-        <input type="text" placeholder="Subject" />
-      </div>
-      <div className="advanced-search">
-        <input type="checkbox" />
-        <label>
-          <p>Advanced Search</p>
-        </label>
-      </div>
-      <button type="submit"> Search</button>
-    </div>
-  );
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  searchDocument: state.searchDocument
+});
+
+const mapDispatchToProps = {
+  setSearchInput
 };
 
-SearchDocumentForm.propTypes = {};
+SearchDocumentForm.propTypes = {
+  searchDocument: PropTypes.object.isRequired,
+  setSearchInput: PropTypes.func.isRequired
+};
 
-export default SearchDocumentForm;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchDocumentForm);

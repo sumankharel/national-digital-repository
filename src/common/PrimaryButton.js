@@ -8,8 +8,8 @@ const StyledButton = styled.button`
   color: ${props => props.theme.white};
   cursor: pointer;
   transition: all 0.3s ease-in;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 0.125rem;
   display: grid;
   grid-template-columns: 1fr auto !important;
   text-transform: uppercase;

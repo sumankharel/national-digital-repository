@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import landingReducer from "./landingReducer";
+import searchDocumentReducer from "./searchDocumentReducer";
 import uploadThesisReducer from "./uploadThesisReducer";
 
 export default combineReducers({
-  landing: landingReducer,
+  searchDocument: searchDocumentReducer,
   uploadThesis: uploadThesisReducer
 });
