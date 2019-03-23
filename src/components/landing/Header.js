@@ -5,7 +5,9 @@ import "../../styles/header.css";
 const Header = () => {
   return (
     <header>
-      <span>National Digital Repository</span>
+      <span>
+        <Link to="/">National Digital Repository</Link>
+      </span>
       <div className="routes">
         <Link to="/">Home</Link>
         <Link to="/upload-thesis">Upload Thesis</Link>
