@@ -5,6 +5,7 @@ import "../../styles/landing.css";
 import classNames from "classnames";
 import SearchDocumentForm from "./SearchDocumentForm";
 import UploadDocumentForm from "./UploadDocumentForm";
+import {IoIosCloudUpload, IoIosSearch} from "react-icons/io";
 
 class Landing extends Component {
   state = {
@@ -38,13 +39,19 @@ class Landing extends Component {
             className={classNames({ "active-button": showSearchDocument })}
             onClick={() => this.handleShowSearchDocument()}
           >
-            <i className="fas fa-search" /> Search Document
+            <span>
+              <IoIosSearch />
+              Search Document
+            </span>
           </button>
           <button
             className={classNames({ "active-button": showUploadDocument })}
             onClick={() => this.handleShowUploadDocument()}
           >
-            <i className="fas fa-file-upload" /> Upload Document
+            <span>
+            <IoIosCloudUpload />
+            Upload Document
+            </span>
           </button>
         </div>
         {showSearchDocument ? <SearchDocumentForm /> : null}
