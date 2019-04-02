@@ -1,14 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
-
+import React,{ Component } from "react";
+//import InputFormField from "../../common/InputFormField";
+//import PropTypes from "prop-types";
+import PrimaryButton from "../../common/PrimaryButton";
+import { IoIosPerson } from "react-icons/io";
 const UploadDocumentForm = props => {
+  
   return (
-    <div className="upload-document-form">
-      <p> Document Form Here</p>
-    </div>
+    <div className="search-document-form">
+    <div className="upload-label">
+    <label>
+      <p>YOU MUST LOGIN TO UPLOAD YOUR THESIS</p>
+      </label>
+      </div>
+        <div className="side-by-side">
+          <input type="email" placeholder="USERNAME/EXAM REGISTRATION NUMBER" /> 
+          <input type="Password"placeholder="PASSWORD" /> 
+          </div>
+         <PrimaryButton type="submit">LOGIN</PrimaryButton>
+       </div>  
+    
   );
 };
+  UploadDocumentForm.propTypes = {};
+  
+  export default UploadDocumentForm;
+  
 
-UploadDocumentForm.propTypes = {};
 
-export default UploadDocumentForm;
+
+
+
