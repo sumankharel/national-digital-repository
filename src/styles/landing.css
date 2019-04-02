@@ -91,10 +91,23 @@ div.advanced-search input[type="checkbox"] {
   transform: scale(1.5);
 }
 
+
 .upload-document-form {
   display: grid;
   grid-gap: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 6px;
+}
+.upload-document-form input {
+  width: 100%;
+  padding: 10px 5px;
+}
+div.upload-label {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 20px;
+  color: #eee;
 }
