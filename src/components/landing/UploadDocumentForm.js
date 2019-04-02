@@ -2,7 +2,7 @@ import React,{ Component } from "react";
 //import InputFormField from "../../common/InputFormField";
 //import PropTypes from "prop-types";
 import PrimaryButton from "../../common/PrimaryButton";
-import { IoIosPerson } from "react-icons/io";
+
 const UploadDocumentForm = props => {
   
   return (
