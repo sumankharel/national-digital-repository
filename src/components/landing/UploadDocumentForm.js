@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const UploadDocumentForm = props => {
   return (
     <div className="upload-document-form">
-      <p>Upload Document Form Here</p>
+      <p> Document Form Here</p>
     </div>
   );
 };
