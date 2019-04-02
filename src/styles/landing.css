@@ -97,7 +97,7 @@ div.advanced-search input[type="checkbox"] {
   grid-gap: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .upload-document-form input {
   width: 100%;
