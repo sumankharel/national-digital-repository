@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   display: grid;
   grid-gap: 10px;
   width: 100% !important;
@@ -23,14 +23,12 @@ const Container = styled.div`
   }
 `;
 
-const InputFormField = ({ label, type, name, value, onChange }) => {
-  return (
-    <Container>
-      <label>{label}</label>
-      <input onChange={onChange} type={type} name={name} value={value} />
-    </Container>
-  );
-};
+const InputFormField = ({ label, type, name, value, onChange }) => (
+  <StyledContainer>
+    <label>{label}</label>
+    <input onChange={onChange} type={type} name={name} value={value} />
+  </StyledContainer>
+);
 
 InputFormField.propTypes = {
   label: PropTypes.string.isRequired,

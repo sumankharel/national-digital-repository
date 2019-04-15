@@ -7,7 +7,10 @@ import InputFormField from "../../common/InputFormField";
 import PrimaryButton from "../../common/PrimaryButton";
 import Button from "../../common/Button";
 import "../../styles/institution.css";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import {
+  IoIosArrowRoundForward,
+  IoIosCloseCircleOutline
+} from "react-icons/io";
 
 import {
   showNextForm,
@@ -132,15 +135,17 @@ class InstitutionInfo extends Component {
 
         <div className="form-info red-info">
           <p>
-            The pre-filled data in the above fields according the information we
-            obtained from your academic institutiion. Please check them
-            carefully, if you find any incorrect information kindly contact to
-            yout campus administration.
+            The pre-filled data in the above fields are according to the
+            information we recieved from your academic institutiion. Please
+            contact your campus administration if you find any errors.
           </p>
         </div>
 
         <div className="form-actions side-by-side">
-          <Button onClick={this.handleCancelUpload}>Cancel</Button>
+          <Button onClick={this.handleCancelUpload}>
+            <IoIosCloseCircleOutline />
+            Cancel
+          </Button>
           <PrimaryButton onClick={this.props.showNextForm}>
             Agree / Next <IoIosArrowRoundForward />
           </PrimaryButton>

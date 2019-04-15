@@ -1,5 +1,5 @@
 .author {
-  padding: 20px 0;
+  padding: 40px 0 0 0;
   width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -10,19 +10,4 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-column-gap: 20px;
-}
-
-.form-actions .btn {
-  padding: 10px 5px;
-  border: 0;
-}
-
-.form-actions .btn-warning {
-  background-color: #ff3232;
-  color: #eee;
-}
-
-.form-actions .btn-accept {
-  background-color: var(--primary-color);
-  color: #eee;
 }

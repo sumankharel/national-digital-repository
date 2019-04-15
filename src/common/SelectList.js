@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   display: grid;
   grid-gap: 5px;
   width: 100%;
@@ -54,11 +54,11 @@ const SelectList = ({ name, value, options, defaultOptionValue, onChange }) => {
   ];
 
   return (
-    <Container>
+    <StyledContainer>
       <select name={name} value={value} onChange={onChange}>
         {selectOptions}
       </select>
-    </Container>
+    </StyledContainer>
   );
 };
 

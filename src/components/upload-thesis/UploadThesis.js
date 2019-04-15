@@ -5,7 +5,18 @@ import InstitutionInfo from "./InstitutionInfo";
 import AuthorInfo from "./AuthorInfo";
 import ThesisInfo from "./ThesisInfo";
 import UploadInfo from "./UploadInfo";
-import "../../styles/upload-thesis.css";
+import styled from "styled-components";
+
+const StyledComponentTitle = styled.h1`
+  background-color: ${props => props.theme.primary};
+  text-align: center;
+  color: #eee;
+  padding: 15px 0;
+  margin-top: 0px;
+  margin-bottom: 0;
+  box-shadow: inset 0 10px 9px -7px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+`;
 
 class UploadThesis extends Component {
   render() {
@@ -30,8 +41,8 @@ class UploadThesis extends Component {
     }
     return (
       <div>
-        <h1 className="component-title">UPLOAD YOUR THESIS</h1>
-        <NavBar activeItem={showForm} />
+        <StyledComponentTitle>UPLOAD YOUR THESIS</StyledComponentTitle>
+        <NavBar />
         {form}
       </div>
     );

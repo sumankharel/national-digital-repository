@@ -13,7 +13,6 @@
   grid-gap: 10px;
   min-height: calc(100vh - 80px);
   background: rgba(9, 10, 10, 0.5);
- 
 }
 
 .landing h1 {
@@ -64,6 +63,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 5px;
+  min-height: 235px;
 }
 
 .search-document-form div {
@@ -90,7 +90,6 @@ div.advanced-search input[type="checkbox"] {
   cursor: pointer;
   transform: scale(1.5);
 }
-
 
 .upload-document-form {
   display: grid;

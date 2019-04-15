@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const StyledButton = styled.button`
   border: 1px solid ${props => props.theme.yellow};
@@ -16,9 +16,9 @@ const StyledButton = styled.button`
   }
 `;
 
-const WarningButton = ({ onClick, children }) => {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
-};
+const WarningButton = ({ onClick, children }) => (
+  <StyledButton onClick={onClick}>{children}</StyledButton>
+);
 
 WarningButton.propTypes = {
   onClick: PropTypes.func.isRequired,

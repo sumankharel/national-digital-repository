@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const StyledButton = styled.button`
   border: 1px solid ${props => props.theme.primary};
@@ -31,13 +31,11 @@ const StyledButton = styled.button`
 `;
 
 // using div inside button use grid
-const PrimaryButton = ({ onClick, children }) => {
-  return (
-    <StyledButton onClick={onClick}>
-      <div>{children}</div>
-    </StyledButton>
-  );
-};
+const PrimaryButton = ({ onClick, children }) => (
+  <StyledButton onClick={onClick}>
+    <div>{children}</div>
+  </StyledButton>
+);
 
 PrimaryButton.propTypes = {
   onClick: PropTypes.func.isRequired,
