@@ -17,6 +17,7 @@ const StyledDateInputWrapper = styled.div`
     border-bottom: 1px solid #ddd;
     padding: 5px 10px;
     width: 100%;
+    background: transparent;
     transition: all 0.2s ease-in;
 
     &:focus {

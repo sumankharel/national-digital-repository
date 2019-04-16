@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../styles/thesis.css";
-import InputFormField from "../../common/InputFormField";
+import Input from "../../common/Input";
 import Button from "../../common/Button";
 import PrimaryButton from "../../common/PrimaryButton";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
@@ -39,19 +39,19 @@ class ThesisInfo extends Component {
 
     return (
       <div className="thesis">
-        <InputFormField
+        <Input
           label="Thesis Title"
           name="title"
           value={title}
           onChange={this.handleInputChange}
         />
-        <InputFormField
+        <Input
           label="Thesis Abstract"
           name="abstract"
           value={abstract}
           onChange={this.handleInputChange}
         />
-        <InputFormField
+        <Input
           label="Thesis Refrence"
           name="reference"
           value={reference}
@@ -59,18 +59,18 @@ class ThesisInfo extends Component {
         />
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="Keywords"
             name="keyword1"
             value={keyword1}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="keyword2"
             value={keyword2}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="keyword3"
             value={keyword3}
             onChange={this.handleInputChange}
@@ -78,24 +78,24 @@ class ThesisInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             name="keyword4"
             value={keyword4}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="keyword5"
             value={keyword5}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="keyword6"
             value={keyword6}
             onChange={this.handleInputChange}
           />
         </div>
 
-        <InputFormField
+        <Input
           label="Any source of funding you received while writing this thesis ?"
           name="fund"
           value={fund}

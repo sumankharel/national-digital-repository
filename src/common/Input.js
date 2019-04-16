@@ -14,6 +14,7 @@ const StyledContainer = styled.div`
   input {
     border: 0;
     border-bottom: 1px solid #d3d3d3;
+    background: transparent;
     transition: border-bottom 0.3s ease-in;
 
     &:focus {
@@ -23,14 +24,14 @@ const StyledContainer = styled.div`
   }
 `;
 
-const InputFormField = ({ label, type, name, value, onChange }) => (
+const Input = ({ label, type, name, value, onChange }) => (
   <StyledContainer>
     <label>{label}</label>
     <input onChange={onChange} type={type} name={name} value={value} />
   </StyledContainer>
 );
 
-InputFormField.propTypes = {
+Input.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
@@ -38,8 +39,8 @@ InputFormField.propTypes = {
   type: PropTypes.string
 };
 
-InputFormField.defaultProps = {
+Input.defaultProps = {
   type: "string"
 };
 
-export default InputFormField;
+export default Input;

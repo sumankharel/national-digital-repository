@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import InputFormField from "../../common/InputFormField";
+import Input from "../../common/Input";
 import Button from "../../common/Button";
 import PrimaryButton from "../../common/PrimaryButton";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
@@ -11,6 +11,7 @@ import {
   showNextForm,
   setAuthorInfoInput
 } from "../../store/actions/uploadThesisActions";
+import * as SC from "styled-components";
 
 class AuthorInfo extends Component {
   // save changes to store
@@ -41,19 +42,19 @@ class AuthorInfo extends Component {
     return (
       <div className="author">
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="First Name"
             name="firstName"
             value={firstName}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             label="Middle Name"
             name="middleName"
             value={middleName}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             label="Last name"
             name="lastName"
             value={lastName}
@@ -62,18 +63,18 @@ class AuthorInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="Permanent Address"
             name="address"
             value={address}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="district"
             value={district}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             name="municipality"
             value={municipality}
             onChange={this.handleInputChange}
@@ -81,32 +82,20 @@ class AuthorInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
-            name="ward"
-            value={ward}
-            onChange={this.handleInputChange}
-          />
-          <InputFormField
-            name="tole"
-            value={tole}
-            onChange={this.handleInputChange}
-          />
-          <InputFormField
-            name="house"
-            value={house}
-            onChange={this.handleInputChange}
-          />
+          <Input name="ward" value={ward} onChange={this.handleInputChange} />
+          <Input name="tole" value={tole} onChange={this.handleInputChange} />
+          <Input name="house" value={house} onChange={this.handleInputChange} />
         </div>
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="Email"
             type="email"
             name="email"
             value={email}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             label="Mobile"
             type="tel"
             name="mobile"

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import InputFormField from "../../common/InputFormField";
+import Input from "../../common/Input";
 import PrimaryButton from "../../common/PrimaryButton";
 import Button from "../../common/Button";
 import "../../styles/institution.css";
@@ -67,31 +67,27 @@ class InstitutionInfo extends Component {
       universityName,
       campusName,
       location,
-      startYear,
-      endYear,
       authorName,
       coAuthorName,
-      defenseDate,
-      approvalDate,
       supervisorName,
       coSupervisorName
     } = this.props.uploadThesis.institutionInfo;
 
     return (
       <div className="institution">
-        <InputFormField
+        <Input
           label="Name of the university"
           name="universityName"
           value={universityName}
           onChange={this.handleInputChange}
         />
-        <InputFormField
+        <Input
           label="Name of the campus"
           name="campusName"
           value={campusName}
           onChange={this.handleInputChange}
         />
-        <InputFormField
+        <Input
           label="Location"
           name="location"
           value={location}
@@ -113,13 +109,13 @@ class InstitutionInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="Thesis Author"
             name="authorName"
             value={authorName}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             label="Theis Co-Author"
             name="coAuthorName"
             value={coAuthorName}
@@ -137,13 +133,13 @@ class InstitutionInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
+          <Input
             label="Thesis Supervisor "
             name="supervisorName"
             value={supervisorName}
             onChange={this.handleInputChange}
           />
-          <InputFormField
+          <Input
             label="Thesis Co-SuperVisor"
             name="coSupervisorName"
             value={coSupervisorName}

@@ -18,6 +18,16 @@ const StyledComponentTitle = styled.h1`
   font-weight: 400;
 `;
 
+const StyledNavBarWrapper = styled.div`
+  background-color: #f1f4f2;
+`;
+
+const StyledFormWrapper = styled.div`
+  background-color: #f1f4f2;
+  min-height: 70vh;
+  // min height should be calculated as calc(100vh - header - navbar)
+`;
+
 class UploadThesis extends Component {
   render() {
     const { showForm } = this.props.uploadThesis;
@@ -42,8 +52,10 @@ class UploadThesis extends Component {
     return (
       <div>
         <StyledComponentTitle>UPLOAD YOUR THESIS</StyledComponentTitle>
-        <NavBar />
-        {form}
+        <StyledNavBarWrapper>
+          <NavBar />
+        </StyledNavBarWrapper>
+        <StyledFormWrapper>{form}</StyledFormWrapper>
       </div>
     );
   }
