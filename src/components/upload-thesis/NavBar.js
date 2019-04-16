@@ -53,6 +53,7 @@ const StyledItem = styled.div`
   color: ${props => (props.active ? "#333" : props.theme.primary)};
   background-color: ${props => (props.active ? "#fff" : "#F1F4F2")};
   position: relative;
+  transition: all 0.2s ease-in;
 
   &::after {
     content: "";
@@ -76,7 +77,6 @@ const StyledItem = styled.div`
   }
 
   &:hover {
-    background-color: #fff;
     cursor: pointer;
     color: #333;
   }

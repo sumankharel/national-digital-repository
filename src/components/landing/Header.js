@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -8,44 +8,38 @@ const StyledHeader = styled.header`
   height: 80px;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   border-bottom: 1px solid ${props => props.theme.darkPrimary};
   background-color: ${props => props.theme.primary};
+  letter-spacing: 1px;
+  font-size: 1.2rem;
 
-  span {
+  a {
+    text-decoration: none;
+    color: #eee;
     text-transform: uppercase;
-    font-weight: bolder;
-
-    a {
-      text-decoration: none;
-      color: #eee;
-    }
   }
 
-  .routes {
-    float: right;
-
-    a {
-      color: #eee;
-      text-decoration: none;
-      text-transform: uppercase;
-      padding-right: 20px;
-    }
+  a.selected {
+    border-bottom: 2px solid #fff;
   }
 `;
 
-const Header = () => {
-  return (
-    <StyledHeader>
-      <span>
-        <Link to="/">National Digital Repository</Link>
-      </span>
-      <div className="routes">
-        <Link to="/">Home</Link>
-        <Link to="/upload-thesis">Upload Thesis</Link>
-      </div>
-    </StyledHeader>
-  );
-};
+class Header extends Component {
+  render() {
+    return (
+      <StyledHeader>
+        <div>
+          <NavLink to="/">National Digital Repository</NavLink>
+        </div>
+        <div>
+          <NavLink activeClassName="selected" to="/upload-thesis">
+            Upload Thesis
+          </NavLink>
+        </div>
+      </StyledHeader>
+    );
+  }
+}
 
 export default Header;
