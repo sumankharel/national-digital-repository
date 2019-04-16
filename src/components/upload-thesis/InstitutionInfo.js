@@ -7,15 +7,16 @@ import InputFormField from "../../common/InputFormField";
 import PrimaryButton from "../../common/PrimaryButton";
 import Button from "../../common/Button";
 import "../../styles/institution.css";
+
 import {
   IoIosArrowRoundForward,
   IoIosCloseCircleOutline
 } from "react-icons/io";
-
 import {
   showNextForm,
   setInstitutionInfoInput
 } from "../../store/actions/uploadThesisActions";
+import DateInput from "../../common/DateInput";
 
 class InstitutionInfo extends Component {
   // go to home screen on cancel
@@ -30,6 +31,34 @@ class InstitutionInfo extends Component {
 
     this.props.setInstitutionInfoInput({
       [name]: value
+    });
+  };
+
+  // handle study year start change
+  handleStartYearChange = day => {
+    this.props.setInstitutionInfoInput({
+      startYear: day
+    });
+  };
+
+  // handle study year end change
+  handleEndYearChange = day => {
+    this.props.setInstitutionInfoInput({
+      endYear: day
+    });
+  };
+
+  // handle defense date
+  handleDefenseDate = day => {
+    this.props.setInstitutionInfoInput({
+      defenseDate: day
+    });
+  };
+
+  // handle approval change
+  handleApprovalChange = day => {
+    this.props.setInstitutionInfoInput({
+      approvalDate: day
     });
   };
 
@@ -70,19 +99,16 @@ class InstitutionInfo extends Component {
         />
 
         <div className="side-by-side">
-          <InputFormField
+          <DateInput
             label="Start Year"
             name="startYear"
-            type="Date"
-            value={startYear}
-            onChange={this.handleInputChange}
+            onChange={this.handleStartYearChange}
           />
-          <InputFormField
+
+          <DateInput
             label="End Year"
             name="endYear"
-            type="Date"
-            value={endYear}
-            onChange={this.handleInputChange}
+            onChange={this.handleEndYearChange}
           />
         </div>
 
@@ -102,19 +128,11 @@ class InstitutionInfo extends Component {
         </div>
 
         <div className="side-by-side">
-          <InputFormField
-            label="Defense Date"
-            name="defenseDate"
-            type="Date"
-            value={defenseDate}
-            onChange={this.handleInputChange}
-          />
-          <InputFormField
+          <DateInput label="Defense Date" onChange={this.handleDefenseDate} />
+
+          <DateInput
             label="Approval Date"
-            name="approvalDate"
-            type="Date"
-            value={approvalDate}
-            onChange={this.handleInputChange}
+            onChange={this.handleApprovalChange}
           />
         </div>
 
